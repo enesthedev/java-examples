@@ -22,7 +22,7 @@ public class Gun {
 		this.name = name;
 	}
 	
-	public void fire(Target target) {
+	public Gun fire(Target target) {
 		if (this.clip == null) {
 			System.out.println("Silahta bir şarjör mevcut değil!");
 		}
@@ -31,22 +31,25 @@ public class Gun {
 			if (this.clip.fire()) {
 				target.kill();
 			}
-			return;
+			return this;
 		}
 		
 		System.out.println("Hedef, Silahın menzili dışında.");
+		return this;
 	}
 	
-	public void reload() {
+	public Gun reload() {
 		if (this.clip == null) {
 			System.out.println("Silahta bir şarjör mevcut değil!");
 		}
 		
 		this.clip.reload();
+		return this;
 	}
 
-	public void setClip(Clip clip) {
+	public Gun setClip(Clip clip) {
 		this.clip = clip;
+		return this;
 	}
 	
 }
