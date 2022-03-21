@@ -8,21 +8,14 @@ public class Clip {
 		this.bulletCapacity = bulletCapacity;
 		this.bulletCount = bulletCount;
 	}
-
-	public int getBulletCapacity() {
-		return bulletCapacity;
-	}
-
-	public void setBulletCapacity(int bulletCapacity) {
-		this.bulletCapacity = bulletCapacity;
-	}
-
-	public int getBulletCount() {
-		return bulletCount;
-	}
-
-	public void setBulletCount(int bulletCount) {
-		this.bulletCount = bulletCount;
-	}
 	
+	public void reload() {
+		if (this.bulletCapacity - this.bulletCount > 0)
+			this.bulletCount = this.bulletCapacity;
+	}
+
+	public void fire() {
+		if (this.bulletCount > 0)
+			this.bulletCount -= 1;
+	}
 }
