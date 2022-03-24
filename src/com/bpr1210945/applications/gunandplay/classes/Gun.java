@@ -25,6 +25,7 @@ public class Gun {
 	public Gun fire(Target target) {
 		if (this.clip == null) {
 			System.out.println("Silahta bir şarjör mevcut değil!");
+			return this;
 		}
 		
 		if (target.getRange() < range) {
@@ -41,6 +42,7 @@ public class Gun {
 	public Gun reload() {
 		if (this.clip == null) {
 			System.out.println("Silahta bir şarjör mevcut değil!");
+			return this;
 		}
 		
 		this.clip.reload();
