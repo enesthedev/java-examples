@@ -20,6 +20,7 @@ public class GunAndClipAndTargetTest {
 
 		Gun gun1 = new Gun(500, "Desert Eagle");
 		Gun gun2 = new Gun(1500, "Sniper");
+		Gun gun3 = new Gun(700, "MP5");
 		
 		Target target = new Target(600, "Geyik");
 		
@@ -32,6 +33,8 @@ public class GunAndClipAndTargetTest {
 			.fire(target) // Sialhta mermi yok!
 			.reload()
 			.fire(target); // Hedef Geyik öldürüldü
+		
+		gun3.fire(target); // Silahta bir şarjör mevcut değil!
 	}
 
 }
