@@ -5,10 +5,18 @@ public class TwoDMatrix {
 	int column;
 	int[][] array;
 	
+	
 	public TwoDMatrix(int sizeX, int sizeY) {
 		this.row = sizeX;
 		this.column = sizeY;
 		this.array = new int [sizeX][sizeY];
 	}
 	
+	private static class DiagonalSum {
+		int [][] diagonalArray;
+		
+		public DiagonalSum(int[][] array) {
+			this.diagonalArray = array;
+		}
+	}
 }
