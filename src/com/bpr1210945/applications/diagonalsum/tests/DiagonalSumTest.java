@@ -12,23 +12,26 @@ public class DiagonalSumTest {
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		
-		System.out.print("Oluşturulacak dizinin X boyutunu giriniz:");
-		int sizeX = Integer.parseInt(reader.readLine().trim());
+		message("Diagonal Toplam Programı", 0);
+		message("Lütfen dize bilgilerini giriniz", 1);
 		
-		System.out.println("\n");
-		System.out.print("Oluşturulacak dizinin Y boyutunu giriniz:");
-		int sizeY = Integer.parseInt(reader.readLine().trim());
+		message("Oluşturulacak dizinin boyutunu giriniz:", 2);
+		int size = Integer.parseInt(reader.readLine().trim());
 		
-		TwoDMatrix matrix = new TwoDMatrix(sizeX, sizeY);
 		
-		message("");
+		TwoDMatrix matrix = new TwoDMatrix(size, size);
+		
+
 	}
 	
-	public static void message(String message) {
+	public static void message(String message, int linecount) {
 		if (message == null || message.isEmpty()) {
-			throw new IllegalArgumentException("message type is not valid or empty string");
+			throw new IllegalArgumentException("Property 'message' type is not valid or empty string");
 		}
-		System.out.println("\n");
+		
+		for (int i = 0; i < linecount; i++) {
+			System.out.println();
+		}
 		System.out.print(message);
 	}
 }
