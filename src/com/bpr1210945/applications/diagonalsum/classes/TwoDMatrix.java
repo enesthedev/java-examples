@@ -24,6 +24,10 @@ public class TwoDMatrix {
 		return this.diagonal.left();
 	}
 	
+	public int sumDiagonalFromRight() {
+		return this.diagonal.right();
+	}
+	
 	private class DiagonalSum {
 		int [][] diagonalArray;
 		
@@ -34,9 +38,21 @@ public class TwoDMatrix {
 		public int left() {
 			int total = 0;
 			for (int r = 0; r < this.diagonalArray.length; r++) {
-				for (int c = 0; c < this.diagonalArray[r].length; c++) {
+				for (int c = 0; c < this.diagonalArray[0].length; c++) {
 					if (r == c) {
-						total += this.diagonalArray[r][r];
+						total += this.diagonalArray[r][c];
+					}
+				}
+			}
+			return total;
+		}
+		
+		public int right() {
+			int total = 0;
+			for (int r = 0; r < this.diagonalArray.length; r++) {
+				for (int c = this.diagonalArray[0].length - 1; c >= 0; c--) {
+					if (r + c == this.diagonalArray.length - 1) {
+						total += this.diagonalArray[r][c];
 					}
 				}
 			}
