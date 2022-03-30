@@ -21,7 +21,26 @@ public class DiagonalSumTest {
 		
 		TwoDMatrix matrix = new TwoDMatrix(size, size);
 		
+		
+		message("Dizinin elemenlarını aralarında boşluk olucak şekilde giriniz", 2);
+		message("\n", 0);
+		for (int i = 0; i < size; i++) {
+			
+			message("Satır " + (i + 1) + ':', 0);
+			String[] row = reader.readLine().split(" ");
+			
+			if (row.length != size) {
+				message("Lütfen dizi boyutunda eleman girişi yapınız.\nŞuanki dizi boyutu: " + row.length, 1);
+				return;
+			}
+			
+			matrix.addRow(i, row);
+		}
+		
+		message("Soldan diagonal toplam: " + matrix.sumDiagonalFromLeft(), 2);
+		message("Sağdan diagonal toplam: " + matrix.sumDiagonalFromRight(), 1);
 
+		reader.close();
 	}
 	
 	public static void message(String message, int linecount) {
