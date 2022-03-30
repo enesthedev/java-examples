@@ -14,6 +14,12 @@ public class TwoDMatrix {
 		this.diagonal = new DiagonalSum(this.array);
 	}
 	
+	public void addRow(int column, String[] values) {
+		for (int i = 0; i < this.row; i++) {
+			this.array[column][i] = Integer.parseInt(values[i]);
+		}
+	}
+	
 	private class DiagonalSum {
 		int [][] diagonalArray;
 		
