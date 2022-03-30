@@ -20,11 +20,27 @@ public class TwoDMatrix {
 		}
 	}
 	
+	public int sumDiagonalFromLeft() {
+		return this.diagonal.left();
+	}
+	
 	private class DiagonalSum {
 		int [][] diagonalArray;
 		
 		public DiagonalSum(int[][] array) {
 			this.diagonalArray = array;
+		}
+		
+		public int left() {
+			int total = 0;
+			for (int r = 0; r < this.diagonalArray.length; r++) {
+				for (int c = 0; c < this.diagonalArray[r].length; c++) {
+					if (r == c) {
+						total += this.diagonalArray[r][r];
+					}
+				}
+			}
+			return total;
 		}
 	}
 }
