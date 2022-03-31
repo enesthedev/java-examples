@@ -8,6 +8,16 @@ import com.bpr1210945.applications.diagonalsum.classes.TwoDMatrix;
 
 public class DiagonalSumTest {
 
+	/**
+	 * Test Durumu
+	 * 
+	 * Program kullanıcıdan diagonal toplamı olacağı matrisin boyutlarını ister, ardından
+	 * boşluklu ve satır satır olucak şekilde matrisin içeriğini girmesini bekler.
+	 * 
+	 * Girilen bilgilerle yeni bir iki boyutlu matris oluşturulur ve diagonal toplamları hesaplanır.
+	 * 
+	 * message metodu daha rahat şekilde konsole yazı yazdırabilmek için yazılmıştır, message(mesaj, boşluksayısı) şeklinde kullanabilirsiniz.
+	 */
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
