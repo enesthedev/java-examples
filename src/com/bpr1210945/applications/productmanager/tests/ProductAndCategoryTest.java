@@ -7,8 +7,15 @@ import com.bpr1210945.applications.productmanager.classes.Price;
 import com.bpr1210945.applications.productmanager.classes.Product;
 
 public class ProductAndCategoryTest {
-
 	static String[] products = {"Baklava", "Sufle", "Kazandibi"};
+	
+	/**
+	 * Test Durumu
+	 *
+	 * Tatlılar ismindeki kategoriye Baklava, Sufle ve Kazandibini rastgele fiyatlarla ekliyoruz.
+	 * Eklediğimiz ürünleri ekranda fiyatlarıyla beraber listeliyoruz.
+	 * Ürünlerin fiyatlarını rastgele olarak bir fiyat sınıfından türetiyoruz.
+	 */
 	
 	public static void main(String[] args) {
 		Price price = new Price();

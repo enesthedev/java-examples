@@ -8,6 +8,16 @@ public class Category {
 	String name;
 	ArrayList<Product> products;
 	
+	/**
+	 * Kategori sınıfı
+	 * 
+	 * Bu sınıfta bir kategori kimliği, kategori adı ve dinamik ürün listesini değer alan elemanlar atadım. Elemanların getter ve setterlarını oluşurdum.
+	 * Kategorinin bilgilerini obje biçiminde dinamik liste olarak dönen getInfo metodunu oluşturdum, böylelikle teker teker getter yazmama gerek kalmadı.
+	 * 
+	 * addProduct ve removeProduct isminde iki metod oluşturdum. Bu metodlar Product sınıfından türetilmiş objeleri argüman olarak alıp Kategori sınıfındaki
+	 * dinamik ürün listesine ekliyor ve siliyor.
+	 */
+	
 	public Category() {
 		this.uuid = UUID.randomUUID();
 		this.products = new ArrayList<Product>();

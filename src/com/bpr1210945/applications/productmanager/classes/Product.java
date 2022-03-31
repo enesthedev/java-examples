@@ -8,6 +8,19 @@ public class Product {
 	String name;
 	Double price;
 	Category category;
+
+	/**
+	 * Ürün sınıfı
+	 * 
+	 * Bu sınıfta dinamik ürün kimliği üretebilmek için bir property tanımladım ve tipini uuid olarak ayarladım.
+	 * Ürün ismini, fiyatını ve kategorisini alan diğer propertyleri de tanımladım. Kategori propertysi bir kategori sınıfı ile many to one ilişkisi içerisinde.
+	 * 
+	 * getInfo metodunda bir dinamik obje referansı alan ArrayList oluşturdum ve içerisinde ürünün bilgilerini sırasıyla ekledim.
+	 * Bu metod sayesinde teker teker getter kullanmadan tüm ürün bilgilerini kodumuzda kullanabiliyoruz.
+	 * 
+	 * Kategori setter fonksiyonunda ise Kategori sınıfındaki addProduct ve removeProduct fonksiyonlarınlarını kullanıyorum. 
+	 * Fonksiyonlar ile alakalı daha fazla bilgi için kategori sınıfına bakabilirsiniz.
+	 */
 	
 	public Product() {
 		this.uuid = UUID.randomUUID();
